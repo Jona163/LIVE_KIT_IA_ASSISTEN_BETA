@@ -17,3 +17,5 @@ async def entrypoint(ctx: JobContext):
             "You should use short and concise responses, and avoiding usage of unpronouncable punctuation."
         ),
     )
+    await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
+    fnc_ctx = AssistantFnc()
