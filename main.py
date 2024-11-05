@@ -24,3 +24,8 @@ async def entrypoint(ctx: JobContext):
         vad=silero.VAD.load(),
         stt=openai.STT(),
         llm=openai.LLM(),
+        tts=openai.TTS(),
+        chat_ctx=initial_ctx,
+        fnc_ctx=fnc_ctx,
+    )
+    assitant.start(ctx.room)
