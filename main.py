@@ -19,3 +19,8 @@ async def entrypoint(ctx: JobContext):
     )
     await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
     fnc_ctx = AssistantFnc()
+
+    assitant = VoiceAssistant(
+        vad=silero.VAD.load(),
+        stt=openai.STT(),
+        llm=openai.LLM(),
